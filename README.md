@@ -1,6 +1,6 @@
 # Kubernetes Test Deployment
 
-This is a dummy deployment to learn kubernetes stuff.
+This is a dummy deployment to get better at kubernetes stuff.
 
 ## Startup
 
