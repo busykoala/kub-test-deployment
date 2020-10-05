@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kub-test-1
+  namespace: test-deployment
+spec:
+  containers:
+    - image: busykoala/kub-test-1:latest
+      name: kub-test-1
+      livenessProbe:
+        exec:
+          command:
+          - /script.sh
+        initialDelaySeconds: 5
+        timeoutSeconds: 1
+        periodSeconds: 10
+        failureThreshold: 3
+  imagePullSecrets:
+    - name: secrets

@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+secretGenerator:
+ - name: secrets
+   files:
+     - secret/regcred.yml
+
+resources:
+ # Namespace (of all the pods)
+ - namespace.yaml
+
+ # Pods
+ - kub-test-1.yaml
